@@ -6,7 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage  {
+import abstractComponents.AbstractComponents;
+
+public class LoginPage extends AbstractComponents {
 
 	//test
 
@@ -17,10 +19,11 @@ WebDriver driver;
 	public LoginPage(WebDriver driver)
 	{
 		
+		super(driver);
 		//here, this refers to this class's driver object
 		this.driver=driver;	
 		PageFactory.initElements(driver, this); // this code initialize all the elements. Since constructor runs first, this line also runs with it and thus all WebElements gets initialized first
-	
+		
 	}
 	
 	//normal way of object creation for locator
