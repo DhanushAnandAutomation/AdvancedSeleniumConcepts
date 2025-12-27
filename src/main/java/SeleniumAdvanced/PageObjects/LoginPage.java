@@ -43,11 +43,14 @@ WebDriver driver;
 
 	//methods
 	
-	public void loginApplication(String Email, String Password) {
+	public ProductCatalogue loginApplication(String Email, String Password) {
 		
 		userEmail.sendKeys(Email);
 		userPassword.sendKeys(Password);
 		login.click();
+		ProductCatalogue productCatalogue = new ProductCatalogue(driver); 
+		return productCatalogue;
+		//we are sure that when we login into the application, it takes to productCatalogue page. hence we return an object for productcatalogue
 	}
 
 

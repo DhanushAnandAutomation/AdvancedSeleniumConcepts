@@ -20,6 +20,7 @@ public class ProductCatalogue extends AbstractComponents {
 		super(driver);
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
+		//this initElements will help to create all the FindBy webelements initialization
 		
 	}
 	
@@ -54,11 +55,15 @@ public class ProductCatalogue extends AbstractComponents {
 	
 	
 	
-	  public WebElement getProductByName(String productName) { WebElement prod =
-	  ListOfProducts().stream().filter(products->
-	  products.findElement(By.cssSelector("b")).getText().equals(productName)).
-	  findFirst().orElse(null); String abc = prod.getText();
-	  System.out.println(abc); return prod; }
+	  public WebElement getProductByName(String productName) { 
+		  
+	  WebElement prod = ListOfProducts().stream().filter(products->
+	  products.findElement(By.cssSelector("b")).getText().equals(productName)).findFirst().orElse(null); 
+	  String abc = prod.getText();
+	  //System.out.println(abc); 
+	  return prod; 
+	  
+	  }
 	  
 	  public void addProductToCart(String productName) throws InterruptedException{
 	  
