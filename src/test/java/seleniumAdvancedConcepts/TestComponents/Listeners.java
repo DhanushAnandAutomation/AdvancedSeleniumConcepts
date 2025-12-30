@@ -11,14 +11,14 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import testResources.ExtendReportNG;
+import testResources.ExtentReportNG;
 
 public class Listeners extends BaseTest implements ITestListener {
 	
 	ExtentTest test;
 	
 	
-	ExtentReports extent=ExtendReportNG.getReportObject();
+	ExtentReports extent=ExtentReportNG.getReportObject();
 
 	@Override
 	public void onTestStart(ITestResult result) {
@@ -83,6 +83,8 @@ public class Listeners extends BaseTest implements ITestListener {
 		// TODO Auto-generated method stub
 		
 		extent.flush();
+		//done
+		//dd
 		
 	}
 	
