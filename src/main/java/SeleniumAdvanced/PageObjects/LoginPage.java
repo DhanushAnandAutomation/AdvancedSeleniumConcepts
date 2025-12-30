@@ -39,9 +39,18 @@ WebDriver driver;
 	@FindBy(id="login")
 	WebElement login;
 	
+	@FindBy(css="[class*='flyInOut']")
+	WebElement errorMessage;
+	
 	
 
 	//methods
+	
+	public void gotoApplication() {
+		
+		driver.get("https://rahulshettyacademy.com/client");
+		
+	}
 	
 	public ProductCatalogue loginApplication(String Email, String Password) {
 		
@@ -51,6 +60,12 @@ WebDriver driver;
 		ProductCatalogue productCatalogue = new ProductCatalogue(driver); 
 		return productCatalogue;
 		//we are sure that when we login into the application, it takes to productCatalogue page. hence we return an object for productcatalogue
+	}
+	
+	public String getErrorMessage()
+	{
+		waitForWebElementToAppear(errorMessage);
+		return errorMessage.getText();
 	}
 
 

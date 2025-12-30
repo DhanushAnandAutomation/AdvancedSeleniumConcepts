@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="seleniumAdvancedConcepts.TestComponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Error Validations(failed)">
+    <classes>
+      <class name="seleniumAdvancedConcepts.ErrorValidation">
+        <methods>
+          <include name="teardown"/>
+          <include name="launchApplication"/>
+          <include name="LoginWithWrongEmail"/>
+          <include name="ProductErrorValidation"/>
+        </methods>
+      </class> <!-- seleniumAdvancedConcepts.ErrorValidation -->
+    </classes>
+  </test> <!-- Error Validations(failed) -->
+</suite> <!-- Failed suite [Suite] -->

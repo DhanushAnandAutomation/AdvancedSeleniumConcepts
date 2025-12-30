@@ -1,3 +1,6 @@
+SeleniumAdvanced\PageObjects\OrderConfirmationPage.class
+SeleniumAdvanced\PageObjects\CheckOutPage.class
+SeleniumAdvanced\PageObjects\CartPage.class
 SeleniumAdvanced\PageObjects\ProductCatalogue.class
 abstractComponents\AbstractComponents.class
 SeleniumAdvanced\PageObjects\LoginPage.class
